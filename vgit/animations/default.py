@@ -1,7 +1,7 @@
 # animations/default.py
 import curses
-from animations.base import start_animation
-from core import ui_config as cfg
+from vgit.animations.base import start_animation
+from vgit.core import ui_config as cfg
 
 ROBOT_ASCII = """
    [◉_◉]   
@@ -33,7 +33,7 @@ def render(window, _state=None):
 
     # Footer contribution message
     footer1 = "Want to expand support help? Contribute:"
-    footer2 = "github.com/yourrepo"
+    footer2 = "https://github.com/Orange-Tofu/VisualizeGit"
 
     window.addstr(height - 4, (width - len(footer1)) // 2, footer1, curses.color_pair(1))
     window.addstr(height - 3, (width - len(footer2)) // 2, footer2, curses.color_pair(1) | curses.A_UNDERLINE)

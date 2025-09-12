@@ -1,7 +1,7 @@
 # animations/fetch.py
 import curses
-from animations.base import start_animation
-from core import ui_config as cfg
+from vgit.animations.base import start_animation
+from vgit.core import ui_config as cfg
 
 COMMIT_CHAR = "●"
 FLYING_COMMIT_CHAR = "🢀"
@@ -128,7 +128,6 @@ def render(window, state):
 
         try:
             if fetched > 0:
-
                 msg1 = f"Fetched {fetched} new commit(s) for this branch."
             else:
                 msg1 = "No new commits fetched for this branch."
